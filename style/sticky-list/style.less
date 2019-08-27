@@ -1,0 +1,23 @@
+@import "../theme";
+
+div.sticky-list > div {
+	display: inline-block;
+	width:   100%;
+
+	& > div:first-child {
+		position:         -webkit-sticky;
+		position:         sticky;
+		top:              0;
+		left:             0;
+		right:            0;
+		background-color: @sticky-list-bgc;
+		color:            @sticky-list-c;
+		padding:          8px;
+		border-top:       1px solid @sticky-list-bc;
+		box-shadow:       @sticky-list-shadow;
+		z-index:          9998;
+		backdrop-filter: blur(3px);
+		-webkit-backdrop-filter: blur(3px);
+
+	}
+}

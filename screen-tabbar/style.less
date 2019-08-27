@@ -1,0 +1,49 @@
+@import "../style/theme";
+
+footer[is=phong-screen-tabbar] {
+	display         : none;
+	z-index         : 99;
+	text-align      : center;
+	font-size       : 16px;
+	width           : 100%;
+	justify-content : space-between;
+	color: @screen-tabbar-c;
+	background-color: @screen-tabbar-bgc;
+	button {
+		flex-grow        : 1;
+		overflow         : hidden;
+		text-overflow    : ellipsis;
+		font-size        : 16px;
+		white-space      : nowrap;
+		background-color : transparent;
+		color            : white;
+		border-color     : transparent;
+		border           : 0;
+		margin-top       : 5px;
+		margin-bottom    : 5px;
+		position         : relative;
+		padding          : 0 5px;
+		border-right: 1px solid @screen-tabbar-button-bc;
+
+		&.selected:before {
+			background-color: @screen-tabbar-selected-bc;
+		}
+
+		&:last-of-type {
+			border-right : 0 !important;
+		}
+
+		&:before {
+			width            : ~"calc(100% - 20px)";
+			bottom           : 0;
+			position         : absolute;
+			display          : block;
+			margin           : 0 4px;
+			background-color : transparent;
+			height           : 4px;
+			border-radius    : 3px;
+			content          : '';
+			transition       : all .3s;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+@import "../style/theme";
+
+header[is=phong-screen-header] {
+	display:          none;
+	z-index:          99;
+	text-align:       center;
+	height:           48px;
+	font-size:        16px;
+	width:            100%;
+	position:         relative;
+	color:            @screen-header-c;
+	background-color: @screen-header-bgc;
+
+	h1 {
+		width:     ~"calc(100% - 112px)";
+
+		font-size: 16px;
+		margin:    0 56px;
+
+
+		div {
+			position:      absolute;
+			width:         ~"calc(100% - 112px)";
+			opacity:       1;
+			transition:    all .6s;
+			top:           0;
+			overflow:      hidden;
+			text-overflow: ellipsis;
+			white-space:   nowrap;
+			line-height:   48px;
+			height:        48px;
+			font-weight:   400;
+
+			&.inactive {
+				top:     -10px;
+				opacity: 0;
+			}
+
+			&:not([data-subtitle=""]) {
+				line-height: 26px;
+				padding-top: 4px;
+
+				&:after {
+					content:       attr(data-subtitle);
+					font-size:     12px;
+					display:       block;
+					line-height:   10px;
+					font-weight:   300;
+					width:         100%;
+					overflow:      hidden;
+					text-overflow: ellipsis;
+				}
+			}
+		}
+	}
+
+	span.button-left,
+	span.button-right {
+		position:   absolute;
+		text-align: center;
+		width:      48px;
+		height:     32px;
+		margin:     8px 0;
+		font-size:  20px;
+
+		i {
+			position:    absolute;
+			left:        0;
+			top:         0;
+			right:       1px;
+			width:       48px;
+			line-height: 32px;
+			opacity:     1;
+			transition:  all .6s;
+
+			&.inactive {
+				opacity: 0;
+			}
+		}
+
+		transition: all .6s;
+
+		&.hidden {
+			border-color: transparent !important;
+		}
+	}
+
+	span.button-left {
+		top:          0;
+		left:         0;
+		border-right: 1px solid @screen-header-button-bc;
+
+
+	}
+
+	span.button-right {
+		top:         0;
+		right:       0;
+		border-left: 1px solid @screen-header-button-bc;
+
+	}
+}

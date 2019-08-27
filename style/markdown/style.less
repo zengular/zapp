@@ -1,0 +1,73 @@
+@import "../theme";
+
+.markdown {
+
+	>:first-child{margin-top:0!important;}
+	>:last-child{margin-bottom:0!important;}
+
+	h1, h2, h3, h4, h5, h6, p {
+		margin: 8px 0;
+	}
+
+	ul, ol {
+		margin:              8px 0;
+		padding-left:        0px;
+		ul, ol {padding-left: 10px;}
+		list-style-position: inside;
+
+	}
+
+	h1 {
+		font-size:   16px;
+		font-weight: bold;
+	}
+
+	h2 {
+		font-size:   16px;
+		font-weight: normal;
+	}
+
+	h3 {
+		font-size:   14px;
+		font-weight: bold;
+	}
+
+	h4 {
+		font-size:   14px;
+		font-weight: normal;
+	}
+
+	h5 {
+		font-size:   12px;
+		font-weight: bold;
+	}
+
+	h6 {
+		font-size:   12px;
+		font-weight: normal;
+	}
+
+	blockquote {
+		border-left:  3px solid @markdown-table-bc;
+		padding-left: 8px;
+		margin:       8px 0;
+	}
+
+	table {
+		border-collapse: collapse;
+		th {text-align: left; background-color: @markdown-table-bc;}
+		th[align=right] {text-align: right;}
+		td, th {
+			border:  1px solid @markdown-table-bc;
+			padding: 3px 5px;
+		}
+	}
+
+	a {
+		color: @markdown-a-c;
+	}
+
+	img {
+		max-width: 100%;
+	}
+}

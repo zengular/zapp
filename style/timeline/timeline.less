@@ -1,0 +1,36 @@
+div.timeline {
+	header {
+		&.highlight:not(:first-child):not(:last-child) {
+			margin-bottom : 3px;
+			margin-top    : 3px;
+		}
+
+		&.highlight:first-child {
+			border-radius : 4px 4px 0 0;
+			margin-bottom : 3px;
+		}
+
+		&.highlight:last-child.highlight {
+			border-radius : 0 0 4px 4px;
+			margin-top    : 3px;
+		}
+
+		padding     : 0 8px;
+		line-height : 18px;
+		font-size   : 12px;
+
+		i {
+			width        : 14px;
+			text-align   : center;
+			margin-right : 4px;
+			line-height  : 26px;
+		}
+	}
+
+	> :not(header) {
+		border-left : 1px dotted;
+		margin      : 0 8px 0 15px;
+		font-size   : 13px;
+		padding     : 0 0 0 11px;
+	}
+}
